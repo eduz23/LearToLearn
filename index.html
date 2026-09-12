@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Plano de Estudos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span>●</span> Estuda+
+        </div>
+
+        <div class="step-indicator">
+            <span class="active">1</span>
+            <span></span>
+            <span>2</span>
+            <span></span>
+            <span>3</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <p class="tag">SEU APRENDIZADO, DO SEU JEITO</p>
+
+            <h1>
+                Monte seu plano<br>
+                <strong>de estudos personalizado.</strong>
+            </h1>
+
+            <p class="subtitle">
+                Conte o que você quer aprender e descubra como organizar
+                seus estudos de acordo com seu tempo e seus objetivos.
+            </p>
+        </section>
+
+        <form class="study-form">
+
+            <!-- ETAPA 1 -->
+
+            <section class="form-section">
+
+                <div class="section-number">01</div>
+
+                <div class="section-content">
+
+                    <h2>O que você quer aprender?</h2>
+
+                    <p class="section-description">
+                        Adicione os conteúdos que deseja estudar e organize-os
+                        na ordem em que pretende aprender.
+                    </p>
+
+                    <label for="objetivo">Qual é seu principal objetivo?</label>
+
+                    <input
+                        type="text"
+                        id="objetivo"
+                        placeholder="Ex: Aprender programação do zero"
+                    >
+
+                    <label>Conteúdos que deseja estudar</label>
+
+                    <div class="content-list">
+
+                        <div class="content-item">
+                            <span class="content-number">1</span>
+
+                            <input
+                                type="text"
+                                placeholder="Ex: Lógica de programação"
+                            >
+                        </div>
+
+                        <div class="content-item">
+                            <span class="content-number">2</span>
+
+                            <input
+                                type="text"
+                                placeholder="Ex: HTML e CSS"
+                            >
+                        </div>
+
+                        <div class="content-item">
+                            <span class="content-number">3</span>
+
+                            <input
+                                type="text"
+                                placeholder="Ex: JavaScript"
+                            >
+                        </div>
+
+                        <div class="content-item">
+                            <span class="content-number">4</span>
+
+                            <input
+                                type="text"
+                                placeholder="Adicione outro conteúdo"
+                            >
+                        </div>
+
+                        <div class="content-item">
+                            <span class="content-number">5</span>
+
+                            <input
+                                type="text"
+                                placeholder="Adicione outro conteúdo"
+                            >
+                        </div>
+
+                    </div>
+
+                    <p class="helper-text">
+                        A ordem dos conteúdos será utilizada para organizar
+                        seu plano de estudos.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ETAPA 2 -->
+
+            <section class="form-section">
+
+                <div class="section-number">02</div>
+
+                <div class="section-content">
+
+                    <h2>Conheça seu momento atual</h2>
+
+                    <p class="section-description">
+                        Essas informações ajudam a criar um plano adequado
+                        ao seu nível de conhecimento.
+                    </p>
+
+                    <label for="escolaridade">
+                        Qual é sua escolaridade atual?
+                        <span class="optional">Opcional</span>
+                    </label>
+
+                    <select id="escolaridade">
+
+                        <option value="">
+                            Selecione sua escolaridade
+                        </option>
+
+                        <option>Ensino Fundamental</option>
+                        <option>Ensino Médio</option>
+                        <option>Ensino Médio concluído</option>
+                        <option>Ensino Técnico</option>
+                        <option>Ensino Superior</option>
+                        <option>Pós-graduação</option>
+                        <option>Outro</option>
+
+                    </select>
+
+                    <label for="nivel">
+                        Como você considera seu conhecimento atual?
+                    </label>
+
+                    <div class="radio-group">
+
+                        <label class="radio-card">
+                            <input type="radio" name="nivel" value="iniciante">
+                            <div>
+                                <strong>Iniciante</strong>
+                                <small>Estou começando do zero.</small>
+                            </div>
+                        </label>
+
+                        <label class="radio-card">
+                            <input type="radio" name="nivel" value="intermediario">
+                            <div>
+                                <strong>Intermediário</strong>
+                                <small>Já conheço alguns conceitos.</small>
+                            </div>
+                        </label>
+
+                        <label class="radio-card">
+                            <input type="radio" name="nivel" value="avancado">
+                            <div>
+                                <strong>Avançado</strong>
+                                <small>Quero aprofundar meus conhecimentos.</small>
+                            </div>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ETAPA 3 -->
+
+            <section class="form-section">
+
+                <div class="section-number">03</div>
+
+                <div class="section-content">
+
+                    <h2>Quanto tempo você tem?</h2>
+
+                    <p class="section-description">
+                        Escolha quanto tempo consegue dedicar aos estudos
+                        durante a semana.
+                    </p>
+
+                    <label for="tempo">Tempo disponível por semana</label>
+
+                    <select id="tempo">
+
+                        <option value="">
+                            Selecione seu tempo disponível
+                        </option>
+
+                        <option>Até 2 horas por semana</option>
+                        <option>De 2 a 5 horas por semana</option>
+                        <option>De 5 a 10 horas por semana</option>
+                        <option>De 10 a 15 horas por semana</option>
+                        <option>Mais de 15 horas por semana</option>
+
+                    </select>
+
+                    <div class="time-info">
+
+                        <div class="time-icon">◷</div>
+
+                        <div>
+                            <strong>Estude no seu ritmo</strong>
+
+                            <p>
+                                Seu plano será pensado para caber na sua
+                                rotina, sem exigir mais tempo do que você possui.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ETAPA 4 -->
+
+            <section class="form-section">
+
+                <div class="section-number">04</div>
+
+                <div class="section-content">
+
+                    <h2>Qual método você quer testar?</h2>
+
+                    <p class="section-description">
+                        Escolha uma forma de estudar para começar.
+                        Você poderá experimentar outros métodos depois.
+                    </p>
+
+                    <div class="method-grid">
+
+                        <label class="method-card">
+
+                            <input type="radio" name="metodo" value="pomodoro">
+
+                            <div class="method-icon">25</div>
+
+                            <h3>Técnica Pomodoro</h3>
+
+                            <p>
+                                Estude em períodos de foco com pequenas
+                                pausas para descansar.
+                            </p>
+
+                            <span class="method-link">
+                                Foco e produtividade
+                            </span>
+
+                        </label>
+
+
+                        <label class="method-card">
+
+                            <input type="radio" name="metodo" value="revisao">
+
+                            <div class="method-icon">↻</div>
+
+                            <h3>Revisão espaçada</h3>
+
+                            <p>
+                                Revise os conteúdos em diferentes momentos
+                                para reforçar a memória.
+                            </p>
+
+                            <span class="method-link">
+                                Memorização
+                            </span>
+
+                        </label>
+
+
+                        <label class="method-card">
+
+                            <input type="radio" name="metodo" value="pratica">
+
+                            <div class="method-icon">✓</div>
+
+                            <h3>Aprender praticando</h3>
+
+                            <p>
+                                Aprenda colocando o conhecimento em prática
+                                por meio de exercícios e desafios.
+                            </p>
+
+                            <span class="method-link">
+                                Exercícios e projetos
+                            </span>
+
+                        </label>
+
+
+                        <label class="method-card">
+
+                            <input type="radio" name="metodo" value="feynman">
+
+                            <div class="method-icon">?</div>
+
+                            <h3>Técnica Feynman</h3>
+
+                            <p>
+                                Explique o conteúdo com suas próprias palavras
+                                para identificar o que ainda não entendeu.
+                            </p>
+
+                            <span class="method-link">
+                                Compreensão
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ETAPA 5 -->
+
+            <section class="form-section">
+
+                <div class="section-number">05</div>
+
+                <div class="section-content">
+
+                    <h2>Seu plano inicial de estudos</h2>
+
+                    <p class="section-description">
+                        Escolha o tipo de material que gostaria de utilizar
+                        para começar sua jornada.
+                    </p>
+
+                    <label for="material">Material de estudo preferido</label>
+
+                    <select id="material">
+
+                        <option value="">
+                            Selecione uma opção
+                        </option>
+
+                        <option>
+                            Aulas em vídeo
+                        </option>
+
+                        <option>
+                            Apostilas e textos
+                        </option>
+
+                        <option>
+                            Exercícios práticos
+                        </option>
+
+                        <option>
+                            Resumos e mapas mentais
+                        </option>
+
+                        <option>
+                            Projetos práticos
+                        </option>
+
+                        <option>
+                            Uma combinação de materiais
+                        </option>
+
+                    </select>
+
+                    <label for="observacoes">
+                        Existe algo mais que devemos considerar?
+                        <span class="optional">Opcional</span>
+                    </label>
+
+                    <textarea
+                        id="observacoes"
+                        rows="4"
+                        placeholder="Ex: Tenho mais tempo para estudar aos finais de semana..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESUMO -->
+
+            <section class="summary-box">
+
+                <div class="summary-icon">✓</div>
+
+                <div>
+                    <h3>Tudo pronto para começar?</h3>
+
+                    <p>
+                        Com suas respostas, será possível organizar uma
+                        sequência de conteúdos e criar uma sugestão inicial
+                        de estudos com materiais adequados ao seu objetivo.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <button type="submit" class="submit-button">
+                Criar meu plano de estudos
+                <span>→</span>
+            </button>
+
+            <p class="privacy-text">
+                Seus dados serão utilizados apenas para personalizar
+                sua experiência de aprendizado.
+            </p>
+
+        </form>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="logo">
+            <span>●</span> Estuda+
+        </div>
+
+        <p>
+            Aprender fica mais simples quando você sabe por onde começar.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
