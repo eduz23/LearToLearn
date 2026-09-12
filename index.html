@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Meu Plano de Estudos</title>
+    <title>LearnToLearn</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,444 +17,757 @@
 
 <body>
 
+    <!-- CABEÇALHO -->
+
     <header class="header">
+
         <div class="logo">
-            <span>●</span> Estuda+
+            Learn<span>To</span>Learn
         </div>
 
-        <div class="step-indicator">
-            <span class="active">1</span>
-            <span></span>
-            <span>2</span>
-            <span></span>
-            <span>3</span>
+        <div class="header-label">
+            Seu espaço de aprendizagem
         </div>
+
     </header>
+
 
     <main class="container">
 
-        <section class="intro">
-            <p class="tag">SEU APRENDIZADO, DO SEU JEITO</p>
 
-            <h1>
-                Monte seu plano<br>
-                <strong>de estudos personalizado.</strong>
-            </h1>
+        <!-- ========================= -->
+        <!-- TELA 1 - QUESTIONÁRIO -->
+        <!-- ========================= -->
 
-            <p class="subtitle">
-                Conte o que você quer aprender e descubra como organizar
-                seus estudos de acordo com seu tempo e seus objetivos.
-            </p>
-        </section>
+        <section id="tela-questionario" class="tela">
 
-        <form class="study-form">
+            <div class="intro">
 
-            <!-- ETAPA 1 -->
+                <span class="tag">VAMOS COMEÇAR</span>
 
-            <section class="form-section">
+                <h1>
+                    Vamos conhecer<br>
+                    <strong>seu jeito de aprender.</strong>
+                </h1>
 
-                <div class="section-number">01</div>
+                <p>
+                    Responda algumas perguntas para que possamos
+                    entender suas dificuldades e acompanhar sua evolução.
+                </p>
 
-                <div class="section-content">
+            </div>
 
-                    <h2>O que você quer aprender?</h2>
 
-                    <p class="section-description">
-                        Adicione os conteúdos que deseja estudar e organize-os
-                        na ordem em que pretende aprender.
-                    </p>
+            <form id="formulario">
 
-                    <label for="objetivo">Qual é seu principal objetivo?</label>
+
+                <!-- OBJETIVO -->
+
+                <div class="pergunta">
+
+                    <label>
+                        1. Qual é seu principal objetivo?
+                    </label>
+
+                    <div class="opcoes">
+
+                        <label class="opcao">
+                            <input type="radio" name="objetivo" value="Melhorar minhas notas" required>
+                            Melhorar minhas notas
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="objetivo" value="Recuperar uma matéria">
+                            Recuperar uma matéria
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="objetivo" value="Preparar-me para uma prova">
+                            Preparar-me para uma prova
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="objetivo" value="Entender melhor as aulas">
+                            Entender melhor as aulas
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MATÉRIAS -->
+
+                <div class="pergunta">
+
+                    <label for="materias">
+                        2. Em quais matérias você tem mais dificuldade?
+                    </label>
 
                     <input
                         type="text"
-                        id="objetivo"
-                        placeholder="Ex: Aprender programação do zero"
+                        id="materias"
+                        placeholder="Ex: Matemática, química e física"
+                        required
                     >
 
-                    <label>Conteúdos que deseja estudar</label>
-
-                    <div class="content-list">
-
-                        <div class="content-item">
-                            <span class="content-number">1</span>
-
-                            <input
-                                type="text"
-                                placeholder="Ex: Lógica de programação"
-                            >
-                        </div>
-
-                        <div class="content-item">
-                            <span class="content-number">2</span>
-
-                            <input
-                                type="text"
-                                placeholder="Ex: HTML e CSS"
-                            >
-                        </div>
-
-                        <div class="content-item">
-                            <span class="content-number">3</span>
-
-                            <input
-                                type="text"
-                                placeholder="Ex: JavaScript"
-                            >
-                        </div>
-
-                        <div class="content-item">
-                            <span class="content-number">4</span>
-
-                            <input
-                                type="text"
-                                placeholder="Adicione outro conteúdo"
-                            >
-                        </div>
-
-                        <div class="content-item">
-                            <span class="content-number">5</span>
-
-                            <input
-                                type="text"
-                                placeholder="Adicione outro conteúdo"
-                            >
-                        </div>
-
-                    </div>
-
-                    <p class="helper-text">
-                        A ordem dos conteúdos será utilizada para organizar
-                        seu plano de estudos.
-                    </p>
-
                 </div>
 
-            </section>
 
+                <!-- DIFICULDADE -->
 
-            <!-- ETAPA 2 -->
+                <div class="pergunta">
 
-            <section class="form-section">
-
-                <div class="section-number">02</div>
-
-                <div class="section-content">
-
-                    <h2>Conheça seu momento atual</h2>
-
-                    <p class="section-description">
-                        Essas informações ajudam a criar um plano adequado
-                        ao seu nível de conhecimento.
-                    </p>
-
-                    <label for="escolaridade">
-                        Qual é sua escolaridade atual?
-                        <span class="optional">Opcional</span>
+                    <label>
+                        3. O que mais acontece quando você tenta estudar?
                     </label>
 
-                    <select id="escolaridade">
+                    <div class="opcoes">
 
-                        <option value="">
-                            Selecione sua escolaridade
-                        </option>
+                        <label class="opcao">
+                            <input type="radio" name="dificuldade" value="Leio e esqueço" required>
+                            Leio e esqueço
+                        </label>
 
-                        <option>Ensino Fundamental</option>
-                        <option>Ensino Médio</option>
-                        <option>Ensino Médio concluído</option>
-                        <option>Ensino Técnico</option>
-                        <option>Ensino Superior</option>
-                        <option>Pós-graduação</option>
-                        <option>Outro</option>
+                        <label class="opcao">
+                            <input type="radio" name="dificuldade" value="Não sei por onde começar">
+                            Não sei por onde começar
+                        </label>
 
-                    </select>
+                        <label class="opcao">
+                            <input type="radio" name="dificuldade" value="Entendo a teoria, mas erro exercícios">
+                            Entendo a teoria, mas erro exercícios
+                        </label>
 
-                    <label for="nivel">
-                        Como você considera seu conhecimento atual?
+                        <label class="opcao">
+                            <input type="radio" name="dificuldade" value="Perco o foco">
+                            Perco o foco
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="dificuldade" value="Estudo bastante e a nota não melhora">
+                            Estudo bastante e a nota não melhora
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="dificuldade" value="Não tenho tempo">
+                            Não tenho tempo
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMO ESTUDA -->
+
+                <div class="pergunta">
+
+                    <label>
+                        4. Como você normalmente estuda?
                     </label>
 
-                    <div class="radio-group">
+                    <div class="opcoes">
 
-                        <label class="radio-card">
-                            <input type="radio" name="nivel" value="iniciante">
-                            <div>
-                                <strong>Iniciante</strong>
-                                <small>Estou começando do zero.</small>
-                            </div>
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Releio conteúdo">
+                            Releio conteúdo
                         </label>
 
-                        <label class="radio-card">
-                            <input type="radio" name="nivel" value="intermediario">
-                            <div>
-                                <strong>Intermediário</strong>
-                                <small>Já conheço alguns conceitos.</small>
-                            </div>
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Faço exercícios">
+                            Faço exercícios
                         </label>
 
-                        <label class="radio-card">
-                            <input type="radio" name="nivel" value="avancado">
-                            <div>
-                                <strong>Avançado</strong>
-                                <small>Quero aprofundar meus conhecimentos.</small>
-                            </div>
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Assisto vídeos">
+                            Assisto vídeos
                         </label>
 
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- ETAPA 3 -->
-
-            <section class="form-section">
-
-                <div class="section-number">03</div>
-
-                <div class="section-content">
-
-                    <h2>Quanto tempo você tem?</h2>
-
-                    <p class="section-description">
-                        Escolha quanto tempo consegue dedicar aos estudos
-                        durante a semana.
-                    </p>
-
-                    <label for="tempo">Tempo disponível por semana</label>
-
-                    <select id="tempo">
-
-                        <option value="">
-                            Selecione seu tempo disponível
-                        </option>
-
-                        <option>Até 2 horas por semana</option>
-                        <option>De 2 a 5 horas por semana</option>
-                        <option>De 5 a 10 horas por semana</option>
-                        <option>De 10 a 15 horas por semana</option>
-                        <option>Mais de 15 horas por semana</option>
-
-                    </select>
-
-                    <div class="time-info">
-
-                        <div class="time-icon">◷</div>
-
-                        <div>
-                            <strong>Estude no seu ritmo</strong>
-
-                            <p>
-                                Seu plano será pensado para caber na sua
-                                rotina, sem exigir mais tempo do que você possui.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- ETAPA 4 -->
-
-            <section class="form-section">
-
-                <div class="section-number">04</div>
-
-                <div class="section-content">
-
-                    <h2>Qual método você quer testar?</h2>
-
-                    <p class="section-description">
-                        Escolha uma forma de estudar para começar.
-                        Você poderá experimentar outros métodos depois.
-                    </p>
-
-                    <div class="method-grid">
-
-                        <label class="method-card">
-
-                            <input type="radio" name="metodo" value="pomodoro">
-
-                            <div class="method-icon">25</div>
-
-                            <h3>Técnica Pomodoro</h3>
-
-                            <p>
-                                Estude em períodos de foco com pequenas
-                                pausas para descansar.
-                            </p>
-
-                            <span class="method-link">
-                                Foco e produtividade
-                            </span>
-
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Faço resumos">
+                            Faço resumos
                         </label>
 
-
-                        <label class="method-card">
-
-                            <input type="radio" name="metodo" value="revisao">
-
-                            <div class="method-icon">↻</div>
-
-                            <h3>Revisão espaçada</h3>
-
-                            <p>
-                                Revise os conteúdos em diferentes momentos
-                                para reforçar a memória.
-                            </p>
-
-                            <span class="method-link">
-                                Memorização
-                            </span>
-
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Uso flashcards">
+                            Uso flashcards
                         </label>
 
-
-                        <label class="method-card">
-
-                            <input type="radio" name="metodo" value="pratica">
-
-                            <div class="method-icon">✓</div>
-
-                            <h3>Aprender praticando</h3>
-
-                            <p>
-                                Aprenda colocando o conhecimento em prática
-                                por meio de exercícios e desafios.
-                            </p>
-
-                            <span class="method-link">
-                                Exercícios e projetos
-                            </span>
-
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Peço ajuda para IA">
+                            Peço ajuda para IA
                         </label>
 
-
-                        <label class="method-card">
-
-                            <input type="radio" name="metodo" value="feynman">
-
-                            <div class="method-icon">?</div>
-
-                            <h3>Técnica Feynman</h3>
-
-                            <p>
-                                Explique o conteúdo com suas próprias palavras
-                                para identificar o que ainda não entendeu.
-                            </p>
-
-                            <span class="method-link">
-                                Compreensão
-                            </span>
-
+                        <label class="opcao">
+                            <input type="checkbox" name="estudo" value="Quase não estudo">
+                            Quase não estudo
                         </label>
 
                     </div>
 
                 </div>
 
-            </section>
 
+                <!-- TEMPO -->
 
-            <!-- ETAPA 5 -->
+                <div class="pergunta">
 
-            <section class="form-section">
-
-                <div class="section-number">05</div>
-
-                <div class="section-content">
-
-                    <h2>Seu plano inicial de estudos</h2>
-
-                    <p class="section-description">
-                        Escolha o tipo de material que gostaria de utilizar
-                        para começar sua jornada.
-                    </p>
-
-                    <label for="material">Material de estudo preferido</label>
-
-                    <select id="material">
-
-                        <option value="">
-                            Selecione uma opção
-                        </option>
-
-                        <option>
-                            Aulas em vídeo
-                        </option>
-
-                        <option>
-                            Apostilas e textos
-                        </option>
-
-                        <option>
-                            Exercícios práticos
-                        </option>
-
-                        <option>
-                            Resumos e mapas mentais
-                        </option>
-
-                        <option>
-                            Projetos práticos
-                        </option>
-
-                        <option>
-                            Uma combinação de materiais
-                        </option>
-
-                    </select>
-
-                    <label for="observacoes">
-                        Existe algo mais que devemos considerar?
-                        <span class="optional">Opcional</span>
+                    <label>
+                        5. Quanto tempo você normalmente consegue estudar
+                        fora da escola?
                     </label>
 
-                    <textarea
-                        id="observacoes"
-                        rows="4"
-                        placeholder="Ex: Tenho mais tempo para estudar aos finais de semana..."
-                    ></textarea>
+                    <div class="opcoes">
+
+                        <label class="opcao">
+                            <input type="radio" name="tempo" value="Menos de 30 minutos" required>
+                            Menos de 30 min
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="tempo" value="30 a 60 minutos">
+                            30–60 min
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="tempo" value="1 a 2 horas">
+                            1–2 h
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="tempo" value="Mais de 2 horas">
+                            Mais de 2 h
+                        </label>
+
+                    </div>
 
                 </div>
 
-            </section>
+
+                <!-- NOTAS -->
+
+                <div class="pergunta">
+
+                    <label for="media">
+                        6. Qual é sua média aproximada atualmente?
+                    </label>
+
+                    <p class="ajuda">
+                        Isso nos ajuda a acompanhar sua evolução.
+                    </p>
+
+                    <input
+                        type="number"
+                        id="media"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="Ex: 6.5"
+                        required
+                    >
+
+                </div>
 
 
-            <!-- RESUMO -->
+                <!-- OBJETIVO DE NOTA -->
 
-            <section class="summary-box">
+                <div class="pergunta">
 
-                <div class="summary-icon">✓</div>
+                    <label for="nota-desejada">
+                        7. Qual nota você gostaria de alcançar?
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota-desejada"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="Ex: 8.5"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PROVA -->
+
+                <div class="pergunta">
+
+                    <label>
+                        8. Tem alguma prova próxima?
+                    </label>
+
+                    <div class="opcoes">
+
+                        <label class="opcao">
+                            <input type="radio" name="prova" value="sim" required>
+                            Sim
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="prova" value="nao">
+                            Não
+                        </label>
+
+                    </div>
+
+                    <div id="dados-prova" class="prova-extra">
+
+                        <input
+                            type="text"
+                            id="materia-prova"
+                            placeholder="Matéria da prova"
+                        >
+
+                        <input
+                            type="date"
+                            id="data-prova"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="botao-principal">
+                    Continuar
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- TELA 2 - INTRODUÇÃO -->
+        <!-- ========================= -->
+
+        <section id="tela-introducao" class="tela escondida">
+
+            <div class="centralizado">
+
+                <div class="icone-grande">
+                    ✓
+                </div>
+
+                <span class="tag">TUDO PRONTO</span>
+
+                <h1>
+                    Vamos descobrir como<br>
+                    <strong>você aprende melhor.</strong>
+                </h1>
+
+                <p>
+                    Em vez de definir um método fixo para você,
+                    o LearnToLearn vai testar diferentes estratégias
+                    de estudo, acompanhar seu desempenho e adaptar
+                    suas sessões conforme seus resultados.
+                </p>
+
+                <div class="info-card">
+
+                    <h3>Como vai funcionar?</h3>
+
+                    <div class="info-item">
+                        <span>01</span>
+                        <p>Você escolhe o que precisa estudar.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>02</span>
+                        <p>O aplicativo organiza uma sessão personalizada.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>03</span>
+                        <p>Você responde exercícios e acompanha seu desempenho.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <span>04</span>
+                        <p>O sistema identifica o que precisa ser revisado.</p>
+                    </div>
+
+                </div>
+
+                <button class="botao-principal" onclick="mostrarTela('tela-inicio')">
+                    Ir para meus estudos
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- TELA 3 - INÍCIO -->
+        <!-- ========================= -->
+
+        <section id="tela-inicio" class="tela escondida">
+
+            <div class="inicio-topo">
 
                 <div>
-                    <h3>Tudo pronto para começar?</h3>
+
+                    <span class="tag">ÁREA DE ESTUDOS</span>
+
+                    <h1>
+                        O que você precisa<br>
+                        <strong>estudar hoje?</strong>
+                    </h1>
 
                     <p>
-                        Com suas respostas, será possível organizar uma
-                        sequência de conteúdos e criar uma sugestão inicial
-                        de estudos com materiais adequados ao seu objetivo.
+                        Escolha um conteúdo para começar sua sessão.
                     </p>
+
                 </div>
 
-            </section>
+                <div class="avatar">
+                    A
+                </div>
+
+            </div>
 
 
-            <button type="submit" class="submit-button">
-                Criar meu plano de estudos
+            <div class="estudo-opcoes">
+
+                <div class="estudo-card">
+
+                    <div class="card-icone">
+                        ↑
+                    </div>
+
+                    <h3>Enviar material</h3>
+
+                    <p>
+                        Envie uma foto do caderno, PDF, slides
+                        ou apostila.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="arquivo"
+                        accept=".pdf,image/*"
+                    >
+
+                    <label for="arquivo" class="botao-secundario">
+                        Escolher arquivo
+                    </label>
+
+                    <p id="nome-arquivo" class="nome-arquivo"></p>
+
+                </div>
+
+
+                <div class="ou">
+                    OU
+                </div>
+
+
+                <div class="estudo-card">
+
+                    <div class="card-icone">
+                        ✎
+                    </div>
+
+                    <h3>Digitar o conteúdo</h3>
+
+                    <p>
+                        Informe o assunto que deseja aprender.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="conteudo"
+                        placeholder="Ex: Função do segundo grau"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="configuracao">
+
+                <h2>Personalize sua sessão</h2>
+
+                <label for="tempo-hoje">
+                    Quanto tempo você tem hoje?
+                </label>
+
+                <select id="tempo-hoje">
+
+                    <option value="20">20 minutos</option>
+                    <option value="30">30 minutos</option>
+                    <option value="40" selected>40 minutos</option>
+                    <option value="60">1 hora</option>
+
+                </select>
+
+            </div>
+
+
+            <button class="botao-principal" onclick="criarPlano()">
+                Criar meu plano de estudo
                 <span>→</span>
             </button>
 
-            <p class="privacy-text">
-                Seus dados serão utilizados apenas para personalizar
-                sua experiência de aprendizado.
-            </p>
+        </section>
 
-        </form>
+
+
+        <!-- ========================= -->
+        <!-- TELA 4 - PLANO -->
+        <!-- ========================= -->
+
+        <section id="tela-plano" class="tela escondida">
+
+            <div class="centralizado">
+
+                <span class="tag">SEU PLANO INICIAL</span>
+
+                <h1>
+                    Hora de estudar<br>
+                    <strong id="titulo-conteudo">seu conteúdo.</strong>
+                </h1>
+
+                <p>
+                    Organizamos uma sessão inicial para você
+                    começar com clareza e foco.
+                </p>
+
+            </div>
+
+
+            <div class="plano-card">
+
+                <div class="plano-header">
+
+                    <div>
+
+                        <span class="mini-label">
+                            PLANO DE ESTUDO PERSONALIZADO
+                        </span>
+
+                        <h2 id="plano-titulo">
+                            Plano de estudo
+                        </h2>
+
+                    </div>
+
+                    <div class="duracao">
+                        <strong id="duracao-plano">40</strong>
+                        min
+                    </div>
+
+                </div>
+
+
+                <div class="linha-plano">
+
+                    <div class="numero-plano">01</div>
+
+                    <div>
+                        <h3>Diagnóstico rápido</h3>
+                        <p>Responda algumas perguntas para identificar
+                            o que você já sabe.</p>
+                    </div>
+
+                    <strong id="tempo-diagnostico">5 min</strong>
+
+                </div>
+
+
+                <div class="linha-plano">
+
+                    <div class="numero-plano">02</div>
+
+                    <div>
+                        <h3>Explicação dos conteúdos</h3>
+                        <p>Revise os pontos que ainda precisam
+                            de mais atenção.</p>
+                    </div>
+
+                    <strong id="tempo-explicacao">10 min</strong>
+
+                </div>
+
+
+                <div class="linha-plano">
+
+                    <div class="numero-plano">03</div>
+
+                    <div>
+                        <h3>Exercícios práticos</h3>
+                        <p>Coloque o conhecimento em prática.</p>
+                    </div>
+
+                    <strong id="tempo-exercicios">15 min</strong>
+
+                </div>
+
+
+                <div class="linha-plano">
+
+                    <div class="numero-plano">04</div>
+
+                    <div>
+                        <h3>Correção dos erros</h3>
+                        <p>Observe quais pontos precisam
+                            ser melhorados.</p>
+                    </div>
+
+                    <strong id="tempo-correcao">5 min</strong>
+
+                </div>
+
+
+                <div class="linha-plano">
+
+                    <div class="numero-plano">05</div>
+
+                    <div>
+                        <h3>Teste final</h3>
+                        <p>Verifique o que conseguiu aprender.</p>
+                    </div>
+
+                    <strong id="tempo-teste">5 min</strong>
+
+                </div>
+
+
+                <button class="botao-principal" onclick="mostrarTela('tela-resultado')">
+                    Finalizar sessão
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- TELA 5 - RESULTADO -->
+        <!-- ========================= -->
+
+        <section id="tela-resultado" class="tela escondida">
+
+            <div class="centralizado">
+
+                <div class="icone-grande sucesso">
+                    ✓
+                </div>
+
+                <span class="tag">SESSÃO CONCLUÍDA</span>
+
+                <h1>
+                    Você deu mais um passo<br>
+                    <strong>no seu aprendizado.</strong>
+                </h1>
+
+                <p>
+                    Veja um exemplo de como seus resultados
+                    podem ser apresentados.
+                </p>
+
+            </div>
+
+
+            <div class="resultado-grid">
+
+                <div class="resultado-card">
+
+                    <span>ACERTOS</span>
+
+                    <strong>7/10</strong>
+
+                    <p>Questões respondidas corretamente.</p>
+
+                </div>
+
+
+                <div class="resultado-card">
+
+                    <span>DIFICULDADE</span>
+
+                    <strong>Média</strong>
+
+                    <p>Continue praticando esse conteúdo.</p>
+
+                </div>
+
+
+                <div class="resultado-card">
+
+                    <span>REVISÕES</span>
+
+                    <strong>3</strong>
+
+                    <p>Pontos que merecem mais atenção.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="revisao-card">
+
+                <h2>Conteúdos que precisam de revisão</h2>
+
+                <p>
+                    Alguns pontos ainda podem ser reforçados
+                    para melhorar sua compreensão.
+                </p>
+
+                <div class="revisao-item">
+                    <span>01</span>
+                    Conceitos fundamentais
+                </div>
+
+                <div class="revisao-item">
+                    <span>02</span>
+                    Aplicação em exercícios
+                </div>
+
+                <div class="revisao-item">
+                    <span>03</span>
+                    Questões que você errou
+                </div>
+
+            </div>
+
+
+            <div class="proxima-revisao">
+
+                <div class="icone-revisao">
+                    ↻
+                </div>
+
+                <div>
+                    <h3>Vamos testar sua retenção novamente amanhã.</h3>
+
+                    <p>
+                        A ideia é acompanhar o que você realmente
+                        conseguiu aprender ao longo do tempo.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button class="botao-principal" onclick="mostrarTela('tela-inicio')">
+                Estudar outro conteúdo
+                <span>→</span>
+            </button>
+
+        </section>
 
     </main>
 
@@ -462,14 +775,142 @@
     <footer class="footer">
 
         <div class="logo">
-            <span>●</span> Estuda+
+            Learn<span>To</span>Learn
         </div>
 
         <p>
-            Aprender fica mais simples quando você sabe por onde começar.
+            Aprender melhor começa entendendo como você aprende.
         </p>
 
     </footer>
+
+
+    <script>
+
+        // TROCAR DE TELA
+
+        function mostrarTela(id) {
+
+            document.querySelectorAll(".tela").forEach(function(tela) {
+                tela.classList.add("escondida");
+            });
+
+            document.getElementById(id).classList.remove("escondida");
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        // MOSTRAR OU ESCONDER CAMPOS DA PROVA
+
+        const radiosProva = document.querySelectorAll('input[name="prova"]');
+
+        radiosProva.forEach(function(radio) {
+
+            radio.addEventListener("change", function() {
+
+                const campos = document.getElementById("dados-prova");
+
+                if (this.value === "sim") {
+                    campos.style.display = "block";
+                } else {
+                    campos.style.display = "none";
+                }
+
+            });
+
+        });
+
+
+        // FORMULÁRIO INICIAL
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            mostrarTela("tela-introducao");
+
+        });
+
+
+        // MOSTRAR NOME DO ARQUIVO
+
+        document.getElementById("arquivo").addEventListener("change", function() {
+
+            const nome = document.getElementById("nome-arquivo");
+
+            if (this.files.length > 0) {
+                nome.textContent = "Arquivo selecionado: " + this.files[0].name;
+            } else {
+                nome.textContent = "";
+            }
+
+        });
+
+
+        // CRIAR PLANO SIMPLES
+
+        function criarPlano() {
+
+            const conteudo = document.getElementById("conteudo").value.trim();
+
+            const arquivo = document.getElementById("arquivo");
+
+            const tempo = Number(document.getElementById("tempo-hoje").value);
+
+            if (conteudo === "" && arquivo.files.length === 0) {
+
+                alert("Digite um conteúdo ou escolha um arquivo para estudar.");
+
+                return;
+
+            }
+
+            let titulo = conteudo;
+
+            if (titulo === "" && arquivo.files.length > 0) {
+                titulo = arquivo.files[0].name;
+            }
+
+            document.getElementById("titulo-conteudo").textContent = titulo;
+
+            document.getElementById("plano-titulo").textContent =
+                "Estudo: " + titulo;
+
+            document.getElementById("duracao-plano").textContent = tempo;
+
+            // Distribuição simples do tempo
+
+            let diagnostico = Math.round(tempo * 0.125);
+            let explicacao = Math.round(tempo * 0.25);
+            let exercicios = Math.round(tempo * 0.375);
+            let correcao = Math.round(tempo * 0.125);
+            let teste = tempo - diagnostico - explicacao - exercicios - correcao;
+
+            document.getElementById("tempo-diagnostico").textContent =
+                diagnostico + " min";
+
+            document.getElementById("tempo-explicacao").textContent =
+                explicacao + " min";
+
+            document.getElementById("tempo-exercicios").textContent =
+                exercicios + " min";
+
+            document.getElementById("tempo-correcao").textContent =
+                correcao + " min";
+
+            document.getElementById("tempo-teste").textContent =
+                teste + " min";
+
+            mostrarTela("tela-plano");
+
+        }
+
+    </script>
 
 </body>
 
