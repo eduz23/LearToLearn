@@ -1078,3 +1078,57 @@ select:focus {
     }
 
 }
+
+/* ========================= */
+/* TELA FINAL COM LOGO */
+/* ========================= */
+
+#tela-final {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+}
+
+.tela-logo {
+    text-align: center;
+    animation: aparecerLogo 0.6s ease;
+}
+
+.logo-final {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--primary);
+}
+
+.logo-final span {
+    color: var(--green);
+}
+
+.tela-logo p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #777;
+}
+
+@keyframes aparecerLogo {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .logo-final {
+        font-size: 34px;
+    }
+
+}
