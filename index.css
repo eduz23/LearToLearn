@@ -1016,3 +1016,65 @@ select:focus {
     }
 
 }
+
+/* ========================= */
+/* AVALIAÇÃO DOS PROFESSORES */
+/* ========================= */
+
+.avaliacao-professor {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #effaf5;
+    border: 1px solid #d9f0e5;
+    border-radius: 15px;
+    padding: 22px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.icone-avaliacao {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background: var(--green);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.avaliacao-professor h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.avaliacao-professor p {
+    font-size: 12px;
+    color: #638577;
+    line-height: 1.6;
+}
+
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .avaliacao-professor {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .icone-avaliacao {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+}
